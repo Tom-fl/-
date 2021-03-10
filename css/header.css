@@ -1,0 +1,16 @@
+.date {
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+
+.date_text {
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    right: 10%;
+    font-size: 20px;
+    top: 50%;
+    color: blueviolet;
+}

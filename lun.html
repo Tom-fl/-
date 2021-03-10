@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+        }
+        
+        ul {
+            width: 3500px;
+            height: 180px;
+            list-style: none;
+            position: absolute;
+            padding-left: 5px;
+        }
+        
+        ul li {
+            float: left;
+            width: 500px;
+            height: 180px;
+            padding-left: 5px;
+        }
+        
+        div {
+            width: 500px;
+            height: 180px;
+            /* overflow: hidden; */
+            margin: 0 auto;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><img src="./images/dd_scroll_1.jpg" alt="" id="img1"></li>
+            <li><img src="./images/dd_scroll_2.jpg" alt="" id="img2"></li>
+            <li><img src="./images/dd_scroll_3.jpg" alt="" id="img3"></li>
+            <li><img src="./images/dd_scroll_4.jpg" alt="" id="img4"></li>
+            <li><img src="./images/dd_scroll_5.jpg" alt="" id="img5"></li>
+            <li><img src="./images/dd_scroll_6.jpg" alt="" id="img6"></li>
+        </ul>
+    </div>
+    <script>
+        var ul = document.querySelector('ul');
+        var li = document.querySelectorAll('li');
+        console.log(li[0]);
+
+        // ul.style.width = li[0].offsetWidth * li.length + 'px';
+
+        function set() {
+            ul.style.left = ul.offsetLeft - 5 + 'px'
+        }
+        var t = setInterval(set, 30);
+    </script>
+</body>
+
+</html>
